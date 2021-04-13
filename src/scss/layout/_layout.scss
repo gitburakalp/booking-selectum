@@ -33,7 +33,11 @@ html {
   }
 
   @include media-breakpoint-up(1440) {
-    font-size: 10 / 16 * 100%;
+    font-size: calc(10px + (11.25 - 10) * ((100vw - 1440px) / (1920 - 1440)));
+  }
+
+  @include media-breakpoint-up(1920) {
+    font-size: 11.25 / 16 * 100%;
   }
 
   // @media screen and (min-width: 375px) {
