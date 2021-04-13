@@ -14700,6 +14700,11 @@ body.has-search .search-form.is-shown + * {
   font-family: Athelas, serif;
   font-size: 1.4rem;
 }
+@media (min-width: 768px) {
+  .footer-container .description, .footer-container .description--md, .footer-container .description--lg {
+    font-size: 1.6rem;
+  }
+}
 .footer-container .description--sm {
   font-family: Athelas, serif;
   font-size: 1.3rem;
@@ -14812,7 +14817,7 @@ body {
   min-height: 100vh;
 }
 body.no-search {
-  background-image: url("https://asteriahotels.com/images/hotels/bodrum-resort/asteria-hotels-asteria-bodrum-resort-537.jpg");
+  background-image: url("https://luxuryresortbelek.selectumhotels.com/img/gallery/pools/06.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 74%;

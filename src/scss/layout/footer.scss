@@ -94,6 +94,10 @@ body {
       font-family: $ff-Athelas;
       font-size: 1.4rem;
 
+      @include media-breakpoint-up(md) {
+        font-size: 1.6rem;
+      }
+
       &--sm {
         font-family: $ff-Athelas;
         font-size: 1.3rem;
