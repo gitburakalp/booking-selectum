@@ -122,6 +122,12 @@ body {
 
   &.has-search {
     .row--main {
+      .datepicker {
+        @include media-breakpoint-up(xl) {
+          letter-spacing: -0.1125rem;
+        }
+      }
+
       .row--inner {
         @include media-breakpoint-down(sm) {
           max-width: 100vw;
@@ -677,6 +683,7 @@ body {
       height: 1.2rem;
       background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
       right: 0.7rem;
 
       @include media-breakpoint-up(xl) {
@@ -762,12 +769,6 @@ body {
       border: none;
       cursor: pointer;
       color: $input-color;
-
-      &.datepicker {
-        @include media-breakpoint-up(xl) {
-          letter-spacing: -0.1125rem;
-        }
-      }
 
       &::placeholder {
         color: $input-color;
