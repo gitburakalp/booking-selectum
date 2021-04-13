@@ -298,17 +298,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //loading htmlComponents -> purehtml
 
-  $('header').each(function () {
-    $(this).load('./html-components/header.html');
-  });
+  // $('header').each(function () {
+  //   $(this).load('./html-components/header.html');
+  // });
 
-  $('.reservation-summary').each(function () {
-    $(this).load('./html-components/reservation-summary.html');
-  });
+  // $('.reservation-summary').each(function () {
+  //   $(this).load('./html-components/reservation-summary.html');
+  // });
 
-  $('footer').each(function () {
-    !hasSearch ? $(this).load('./html-components/footer.html') : '';
-  });
+  // $('footer').each(function () {
+  //   !hasSearch ? $(this).load('./html-components/footer.html') : '';
+  // });
 });
 
 window.onload = function () {
