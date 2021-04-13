@@ -13876,7 +13876,7 @@ body.no-search {
   background-position: 100% 74%;
 }
 @media (max-width: 767.98px) {
-  body [class*=row] > .col-12 + *:not(.col-auto) {
+  body [class*=row] > .col-12 + *:not(.col-auto):not([class*=child]) {
     margin-top: 1.2rem !important;
   }
 }
