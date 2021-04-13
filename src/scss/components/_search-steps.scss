@@ -17,6 +17,7 @@
         > * {
           &:after {
             background-image: url($imageSrc + '/svg/selected-circle.svg');
+            border: none;
           }
         }
       }
