@@ -1,0 +1,302 @@
+.transfers-block {
+  position: relative;
+
+  &.transfer-selection-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    .transfers-block--bordered {
+      display: inline-block;
+    }
+
+    > * {
+      min-height: 1px;
+      width: 100%;
+      max-width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        + * {
+          margin-top: 1.2rem;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+
+        + * {
+          margin-left: 1.4rem;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        + * {
+          position: relative;
+          margin-left: 3.2rem;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 2.4rem;
+            height: 2.4rem;
+            top: 50%;
+            left: 0;
+            transform: translate(calc(-100% - 0.5rem), -50%);
+            background-image: url($imageSrc + '/svg/right-arrow-bordered.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  + * {
+    margin-top: 1.4rem;
+  }
+
+  &--bordered {
+    @extend .transfers-block;
+    border-radius: 0.57rem;
+    border: 1px solid rgba($colors-greyish-brown, 0.5);
+    padding: 1.35 / 2 + rem;
+
+    &.br-12 {
+      border-radius: 1.2rem;
+      padding: 1rem;
+
+      > .transfers-block--bordered {
+        padding: 1rem;
+        border-radius: 0.8rem;
+      }
+    }
+  }
+
+  &.transfers-list {
+    .transfers-block--bordered {
+      padding: 1rem;
+    }
+
+    .image {
+      border-radius: 0.4rem;
+    }
+  }
+
+  .title-block {
+    display: block;
+
+    + * {
+      margin-top: 1.4rem;
+    }
+
+    .title {
+      font-family: $ff-Didot;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2rem !important;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+
+        &--inner {
+          font-size: 1.4rem !important;
+        }
+      }
+    }
+
+    .description {
+      font-size: 1.5rem;
+      margin-top: 1.4rem;
+    }
+  }
+}
+
+.select-transfer {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    position: relative;
+    min-height: 1px;
+    width: auto;
+    max-width: 100%;
+
+    + * {
+      margin-left: 0.68rem;
+    }
+  }
+
+  &-item {
+    input {
+      position: absolute;
+      max-width: 0;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+
+      + label {
+        font-size: 1rem;
+        line-height: 1;
+        color: $colors-greyish-brown;
+        border-radius: 0.14rem;
+        border: 1px solid rgba($colors-greyish-brown, 0.5);
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+
+        @include media-breakpoint-up(md) {
+          font-size: 1.125rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+          font-size: 1.4rem;
+          line-height: 1.2;
+          padding-left: 0.4rem;
+          padding-right: 0.4rem;
+        }
+
+        &::before {
+          $width: 0.93rem;
+
+          content: '';
+          display: inline-block;
+          width: $width;
+          height: $width;
+          margin-right: 0.23rem;
+          vertical-align: -0.125rem;
+          background-image: url($imageSrc + '/svg/radio-circle.svg');
+          background-repeat: no-repeat;
+          background-size: $width $width;
+
+          @include media-breakpoint-up(md) {
+            $width: 1.4rem;
+
+            width: $width;
+            height: $width;
+            margin-right: $width / 2;
+            vertical-align: -$width * 0.2;
+            background-size: $width $width;
+          }
+        }
+      }
+
+      &:checked {
+        + label {
+          &::before {
+            background-image: url($imageSrc + '/svg/radio-check.svg');
+          }
+        }
+      }
+    }
+  }
+}
+
+.transfers-from-to {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url($imageSrc + '/svg/right-arrow-bg-white.svg');
+    width: 2.4rem;
+    height: 2.4rem;
+    @extend %bgContainCenteredImage;
+    z-index: 9;
+  }
+
+  $amount: 5px;
+
+  margin-left: -$amount;
+  margin-right: -$amount;
+
+  > * {
+    padding-left: $amount;
+    padding-right: $amount;
+  }
+
+  .from,
+  .to {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colors-secondary-100;
+    font-size: 1.4rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 0.4rem;
+
+    @include media-breakpoint-between(md, lg) {
+      font-size: 1.125rem;
+      height: 4rem;
+    }
+  }
+}
+
+.transfers-check {
+  position: relative;
+
+  input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+
+    + label {
+      position: relative;
+      width: 100%;
+      padding: 1.5rem;
+      border: 1px solid rgba($colors-greyish-brown, 0.5);
+      border-radius: 0.4rem;
+      font-family: $ff-Didot;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: $black;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.2rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.8rem;
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: -0.5rem;
+        margin-right: 1rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 0.2rem;
+        border: 1px solid rgba($black, 0.5);
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          background-image: url($imageSrc + '/svg/check.svg');
+          @extend %noRepeatImage;
+          background-size: 90%;
+          background-position: center center;
+        }
+      }
+    }
+  }
+}

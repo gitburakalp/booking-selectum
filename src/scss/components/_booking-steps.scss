@@ -1,0 +1,71 @@
+.booking-steps {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  > * {
+    position: relative;
+    min-height: 1px;
+    width: auto;
+    flex: 0 0 auto;
+    max-width: 100%;
+
+    ~ * {
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc((100% - 1px) / 2);
+        left: 0;
+        width: 2.9rem;
+        height: 1px;
+        background-color: rgba($colors-secondary, 0.5);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: calc((100% - 5px) / 2);
+        left: 2.9rem;
+        width: 5px;
+        height: 5px;
+        background-color: $colors-secondary;
+        border-radius: 50%;
+      }
+
+      padding-left: 4rem;
+    }
+
+    &.is-active,
+    &.is-past {
+      .icons--check {
+        background-image: url($imageSrc + '/svg/selected-circle.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 92.5%;
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    padding: 0rem 1.1rem;
+    border: 1px solid rgba($colors-secondary, 0.5);
+    border-radius: 1.6rem;
+    font-family: $ff-TheanoDidot;
+    font-size: 1.4rem;
+    line-height: 2.2;
+    height: auto;
+    color: $colors-secondary;
+
+    .icons--check {
+      display: inline-block;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 1px solid rgba($colors-secondary, 0.5);
+      border-radius: 50%;
+      margin-bottom: 0.35rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

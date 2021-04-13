@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Booking Selectum Hotels</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/jquery-daterangepicker/daterangepicker.min.css" />
+    <link rel="stylesheet" href="lib/owl.carousel2/owl.carousel.min.css" />
+    <link rel="stylesheet" href="lib/owl.carousel2/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="has-search">
+    <header class="header"></header>
+
+    <main class="main">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-12 content-column">
+            <div class="search-steps">
+              <div class="search-steps__title-block">
+                <h2 class="title--lg">TRANSFER SELECTION</h2>
+              </div>
+              <div class="search-steps__transfers">
+                <div class="search-steps__banner">
+                  <img class="img-fluid" src="https://via.placeholder.com/949x419" alt="Transfers Banner" />
+                  <div class="transfers-block">
+                    <div class="row">
+                      <div class="col-6">
+                        <select class="form-control text-uppercase">
+                          <option>select airport</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <select class="form-control text-uppercase">
+                          <option>Selectum Hotels and Resort</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transfers-block transfer-selection-block">
+                  <div class="transfers-block-column">
+                    <div class="transfers-block--bordered">
+                      <ul class="select-transfer">
+                        <li class="select-transfer-item">
+                          <input id="inpNeedTransfer" type="radio" name="selectTransfer" />
+                          <label for="inpNeedTransfer">I Need Complimentary Transfer</label>
+                        </li>
+                        <li class="select-transfer-item">
+                          <input id="inpDontNeedTransfer" type="radio" name="selectTransfer" />
+                          <label for="inpDontNeedTransfer">I Don't Need Transfer</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="transfers-block-column">
+                    <div class="transfers-block--bordered">
+                      <ul class="select-transfer">
+                        <li class="select-transfer-item">
+                          <input id="inp1_1" type="radio" name="selectTransferInner" />
+                          <label for="inp1_1">Round Trip</label>
+                        </li>
+                        <li class="select-transfer-item">
+                          <input id="inp1_2" type="radio" name="selectTransferInner" />
+                          <label for="inp1_2">Only Arrival</label>
+                        </li>
+                        <li class="select-transfer-item">
+                          <input id="inp1_3" type="radio" name="selectTransferInner" />
+                          <label for="inp1_3">Only Departure</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="arrivalTransfer" class="transfers-block transfers-list">
+                  <div class="title-block">
+                    <h4 class="title">ARRIVAL TRANSFER</h4>
+                  </div>
+
+                  <div class="transfers-block--bordered br-12">
+                    <div class="form-row">
+                      <div class="col-12 col-md-4">
+                        <div class="transfers-block--bordered">
+                          <figure class="image mb-3">
+                            <img src="http://via.placeholder.com/263x171" alt="" />
+                          </figure>
+
+                          <div class="row transfers-from-to">
+                            <div class="col-6">
+                              <div class="from">
+                                Milas <br />
+                                Bodrum Airport
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="to">
+                                Lujo <br />
+                                Hotel Transfer
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="transfers-check mt-3">
+                            <input type="radio" id="inp_Transfer_1" name="transfersList" />
+                            <label for="inp_Transfer_1"> Transfer 1 </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="transfers-block--bordered">
+                          <figure class="image mb-3">
+                            <img src="http://via.placeholder.com/263x171" alt="" />
+                          </figure>
+
+                          <div class="row transfers-from-to">
+                            <div class="col-6">
+                              <div class="from">
+                                Milas <br />
+                                Bodrum Airport
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="to">
+                                Lujo <br />
+                                Hotel Transfer
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="transfers-check mt-3">
+                            <input type="radio" id="inp_Transfer_2" name="transfersList" />
+                            <label for="inp_Transfer_2"> Transfer 2 </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mt-3">
+                        <div class="title-block">
+                          <h4 class="title title--inner">FLIGHT INFORMATION</h4>
+                        </div>
+                        <div class="transfers-block--bordered br-12 mt-md-3">
+                          <div class="form-row">
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" type="time" placeholder="00:00" value="00:00" />
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" type="text" placeholder="Flight Number" />
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" placeholder="Note" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="departureTransfer" class="transfers-block transfers-list">
+                  <div class="title-block">
+                    <h4 class="title">DEPARTURE TRANSFER</h4>
+                  </div>
+
+                  <div class="transfers-block--bordered br-12">
+                    <div class="form-row">
+                      <div class="col-12 col-md-4">
+                        <div class="transfers-block--bordered">
+                          <figure class="image mb-3">
+                            <img src="http://via.placeholder.com/263x171" alt="" />
+                          </figure>
+
+                          <div class="row transfers-from-to">
+                            <div class="col-6">
+                              <div class="from">
+                                Lujo <br />
+                                Hotel Transfer
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="to">
+                                Milas <br />
+                                Bodrum Airport
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="transfers-check mt-3">
+                            <input type="radio" id="inp_Transfer_3" name="transfersList2" />
+                            <label for="inp_Transfer_3"> Transfer 1 </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="transfers-block--bordered">
+                          <figure class="image mb-3">
+                            <img src="http://via.placeholder.com/263x171" alt="" />
+                          </figure>
+
+                          <div class="row transfers-from-to">
+                            <div class="col-6">
+                              <div class="from">
+                                Milas <br />
+                                Bodrum Airport
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="to">
+                                Lujo <br />
+                                Hotel Transfer
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="transfers-check mt-3">
+                            <input type="radio" id="inp_Transfer_4" name="transfersList2" />
+                            <label for="inp_Transfer_4"> Transfer 2 </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="transfers-block--bordered">
+                          <figure class="image mb-3">
+                            <img src="http://via.placeholder.com/263x171" alt="" />
+                          </figure>
+
+                          <div class="row transfers-from-to">
+                            <div class="col-6">
+                              <div class="from">
+                                Milas <br />
+                                Bodrum Airport
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="to">
+                                Lujo <br />
+                                Hotel Transfer
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="transfers-check mt-3">
+                            <input type="radio" id="inp_Transfer_5" name="transfersList2" />
+                            <label for="inp_Transfer_5"> Transfer 3 </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mt-3">
+                        <div class="title-block">
+                          <h4 class="title title--inner">FLIGHT INFORMATION</h4>
+                        </div>
+                        <div class="transfers-block--bordered br-12 mt-md-3">
+                          <div class="form-row">
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" type="time" placeholder="00:00" value="00:00" />
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" type="text" placeholder="Flight Number" />
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <input class="form-control" placeholder="Note" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transfers-block">
+                  <div class="title-block text-center text-md-left">
+                    <h4 class="title">IMPORTANT INFORMATION</h4>
+                    <p class="description">
+                      Dear guest, <br />
+                      according to the regulation of Bodrum / Milas airport, Lujo SELECTUM vehicles are waiting for you at the INTERNATIONAL TERMINAL during your trips to Bodrum.
+                      <br /><br />
+
+                      If you are travelling with only cabin luggage, you can use the exit of the INTERNATIONAL TERMINAL. <br /><br />
+
+                      Please send us an e- mail to info@lujohotel.com before your trip so that we can wait for you at the exit of the Domestic Terminal if you are travelling with one cabin baggage only.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl">
+            <div class="reservation-summary"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="lib/jquery-daterangepicker/jquery.daterangepicker.min.js"></script>
+    <script src="lib/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

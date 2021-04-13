@@ -1,0 +1,94 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#moneyOrder {
+  .custom-check {
+    label {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.radio-lists-block {
+  position: relative;
+
+  .radio-lists {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      position: relative;
+      min-height: 1px;
+      flex: 0 0 auto;
+      width: auto;
+
+      + * {
+        margin-left: 0.8rem;
+      }
+    }
+
+    &-item {
+      padding-left: 1.4rem;
+      padding-right: 2rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      border: 1px solid;
+      border-radius: 0.4rem;
+      transition: border-color $duration, background-color $duration * 3;
+      border-color: $colors-border-color-light;
+      background-color: $white;
+
+      label {
+        font-size: 1.6rem;
+      }
+
+      &.is-active {
+        border-color: $colors-secondary-100;
+        background-color: $colors-secondary-100;
+      }
+    }
+
+    &-contents {
+      margin-top: 1.6rem;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 4.3rem;
+      }
+
+      .form-row {
+        + * {
+          margin-top: 1.6rem;
+
+          @include media-breakpoint-up(xl) {
+            margin-top: 3.7rem;
+          }
+        }
+      }
+
+      > .radio-lists-wrapper {
+        &:not(.is-active) {
+          display: none;
+        }
+
+        .title-row {
+          margin-bottom: 1.6rem;
+
+          @include media-breakpoint-up(xl) {
+            margin-bottom: 2.5rem;
+          }
+        }
+
+        &.is-active {
+          animation: fadeIn $duration;
+        }
+      }
+    }
+  }
+}
